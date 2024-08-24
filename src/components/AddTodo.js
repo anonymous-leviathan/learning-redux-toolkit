@@ -12,13 +12,11 @@ function AddTodo() {
 
     const addTodoHandler = (e) => {
         e.preventDefault();
-
         console.log("Adding Todo:", input);
         dispatch(addTodo(input));
         setInput('');
     };
 
-    // Log todos
     console.log("Todos from state:", todos);
 
     return (<div>
@@ -41,9 +39,6 @@ function AddTodo() {
                 </button>
 
             </form>
-            <ul>
-                {todos.map((todo) => (<li key={todo.id}>{todo.text}</li>))}
-            </ul>
         </div>)
 }
 
